@@ -9,7 +9,7 @@ export default function Player({
   const [playerName, setPlayerName] = useState(initialname);
   const [isEditing, setIsEdeting] = useState(false);
   function handleEditClick() {
-    setIsEdeting((editing) => !editing); //updating based on old state
+    setIsEdeting((editing) => !editing); //updating based on old state/ prev state
     if (isEditing) {
       onChangeName(symbol, playerName);
     }
