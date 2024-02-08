@@ -1,4 +1,4 @@
-export default function GameOver({ winner, rematch }) {
+export default function GameOver({ winner }) {
   function refreshPage() {
     window.location.reload(false);
   }
@@ -9,7 +9,7 @@ export default function GameOver({ winner, rematch }) {
 
       {!winner && <p>It's Draw!</p>}
       <p>
-        <button onClick={rematch}>Click to reload!</button>
+        <button onClick={refreshPage}>Click to reload!</button>
       </p>
     </div>
   );

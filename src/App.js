@@ -21,6 +21,7 @@ function deriveActivePlayer(gameTurns) {
   }
   return currentPlayer;
 }
+
 function App() {
   const [players, setPlayers] = useState({
     X: "Player1",
@@ -71,9 +72,13 @@ function App() {
       return updatedTurns;
     });
   }
-  function handleRematch() {
-    SetGameTurns([]);
-  }
+  // function handleRematch() {
+  //   SetGameTurns([]);
+  //   // setPlayers({
+  //   //   X: "Player1",
+  //   //   Y: "Player2",
+  //   // });
+  // }
   function handlePlayerNameChange(symbol, newName) {
     setPlayers((prevPlayer) => {
       return {
@@ -103,7 +108,7 @@ function App() {
           </ol>
 
           {(winner || hasDraw) && (
-            <GameOver winner={winner} rematch={handleRematch} />
+            <GameOver winner={winner} /> //rematch={handleRematch}
           )}
           <GameBoard onSelectSquare={handleSelectSquare1} board={gameBoard} />
         </div>
